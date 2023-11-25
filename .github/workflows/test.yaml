@@ -1,0 +1,15 @@
+name: Linters
+
+on: []
+
+jobs:
+  fixmes:
+    name: FIXME check
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - uses: akaguny/action-fixme-check@feature/pathspec-supporting-for-exclude-dirs # or @ the latest release
+      with:
+        pathspec: false
+      env:
+        ENVIRONMENT: test
